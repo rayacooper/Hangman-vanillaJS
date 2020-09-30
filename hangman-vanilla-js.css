@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(1, 1, 80);
+    color: white;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Alphabet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50vw;
+}
+
+.Letter {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(110, 110, 110);
+    width: 1vw;
+    height: 1vw;
+    padding: 1vw;
+    margin: 1vw;
+    border-radius: 50%;
+}
