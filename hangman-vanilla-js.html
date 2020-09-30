@@ -9,40 +9,47 @@
 <body>
     <div id="HangmanDisplay">
         <h1>Let's Play Hangman</h1>
-
+        <button id="NewGame" onclick={newGame()}>Start a New Game</button>
+        <p id="placeHolder"></p>
+        <p id="guessWrong"></p>
     </div>
 
     <div id="Alphabet">
-        <div class="Letter">A</div>
-        <div class="Letter">B</div>
-        <div class="Letter">C</div>
-        <div class="Letter">D</div>
-        <div class="Letter">E</div>
-        <div class="Letter">F</div>
-        <div class="Letter">G</div>
-        <div class="Letter">H</div>
-        <div class="Letter">I</div>
-        <div class="Letter">J</div>
-        <div class="Letter">K</div>
-        <div class="Letter">L</div>
-        <div class="Letter">M</div>
-        <div class="Letter">N</div>
-        <div class="Letter">O</div>
-        <div class="Letter">P</div>
-        <div class="Letter">Q</div>
-        <div class="Letter">R</div>
-        <div class="Letter">S</div>
-        <div class="Letter">T</div>
-        <div class="Letter">U</div>
-        <div class="Letter">V</div>
-        <div class="Letter">W</div>
-        <div class="Letter">X</div>
-        <div class="Letter">Y</div>
-        <div class="Letter">Z</div>
+        <div onclick={letterGuess(a)} class="Letter">A</div>
+        <div onclick={letterGuess(b)} class="Letter">B</div>
+        <div onclick={letterGuess(c)} class="Letter">C</div>
+        <div onclick={letterGuess(d)} class="Letter">D</div>
+        <div onclick={letterGuess(e)} class="Letter">E</div>
+        <div onclick={letterGuess(f)} class="Letter">F</div>
+        <div onclick={letterGuess(g)} class="Letter">G</div>
+        <div onclick={letterGuess(h)} class="Letter">H</div>
+        <div onclick={letterGuess(i)} class="Letter">I</div>
+        <div onclick={letterGuess(j)} class="Letter">J</div>
+        <div onclick={letterGuess(k)} class="Letter">K</div>
+        <div onclick={letterGuess(l)} class="Letter">L</div>
+        <div onclick={letterGuess(m)} class="Letter">M</div>
+        <div onclick={letterGuess(n)} class="Letter">N</div>
+        <div onclick={letterGuess(o)} class="Letter">O</div>
+        <div onclick={letterGuess(p)} class="Letter">P</div>
+        <div onclick={letterGuess(q)} class="Letter">Q</div>
+        <div onclick={letterGuess(r)} class="Letter">R</div>
+        <div onclick={letterGuess(s)} class="Letter">S</div>
+        <div onclick={letterGuess(t)} class="Letter">T</div>
+        <div onclick={letterGuess(u)} class="Letter">U</div>
+        <div onclick={letterGuess(v)} class="Letter">V</div>
+        <div onclick={letterGuess(w)} class="Letter">W</div>
+        <div onclick={letterGuess(x)} class="Letter">X</div>
+        <div onclick={letterGuess(y)} class="Letter">Y</div>
+        <div onclick={letterGuess(z)} class="Letter">Z</div>
     </div>
 
-    <div id="Guesses">
+    <!-- <div id="Guesses">
+        <input id="Text" type="text" placeholder="..."/>
+        <br />
+        <button onClick={testing()} id='Enter'>Enter</button>
+    </div> -->
 
-    </div>
+    <script src="hangman-vanilla-js.js"></script>
 </body>
+
 </html>
