@@ -57,7 +57,7 @@ body {
     border-radius: 50%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     #NewGame {
         width: 80vw;
         margin: auto;
