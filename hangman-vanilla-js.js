@@ -4,27 +4,29 @@ const guessWrong = document.getElementById('guessWrong')
 const WordPrompt = document.getElementById('WordPrompt')
 const Gallows = document.getElementById('Gallows')
 
-const allThemLetters = a = 'a', b = 'b', c = 'c', d = 'd', e = 'e', f = 'f', g = 'g', h = 'h', i = 'i', j = 'j', k = 'k',
-    l = 'l', m = 'm', n = 'n', o = 'o', p = 'p', q = 'q', r = 'r', s = 's', t = 't', u = 'u', v = 'v', w = 'w', x = 'x',
-    y = 'y', z = 'z'
-const listOfWords = ['syntax', 'coding', 'tilde', 'error', 'test', 'buffer']
-const listOfPrompts = ["This has to be right, or the computer can't read your code!", "Everybody's favorite hobby!", "The little squiggle key", "When you mess up your code, you get an...", "Do this to make sure your code works!", "C'mon little grey bar, keep going!"]
+const allThemLetters = a = 'A', b = 'B', c = 'C', d = 'D', e = 'E', f = 'F', g = 'G', h = 'H', i = 'I', j = 'J', k = 'K',
+    l = 'L', m = 'M', n = 'N', o = 'O', p = 'P', q = 'Q', r = 'R', s = 'S', t = 'T', u = 'U', v = 'V', w = 'W', x = 'X',
+    y = 'Y', z = 'Z'
+const listOfWords = ['VELOCIRAPTOR', 'HERMIONE', 'ARRAKIS', 'TREEBEARD', 'JIMINY', 'PATRICK', 'TUMNUS', 'ISABEAU']
+const listOfPrompts = ["Clever girl....!",
+                        "The brightest witch of her age", 
+                        "The spice must flow", 
+                        "This conversation feels like it's been going on for months", 
+                        "Always let your conscience be your guide!",
+                        "I am not a crusty crab >:(",
+                        "This faun no longer works for the White Witch",
+                        "She's a hawk in the daytime" ]
 
 let rando = 0;
 let chances = 0;
-let lettersCorrect = 0
 let rightGuesses = []
 let wrongGuesses = []
 let secretWord = []
 let prompter = ''
 let tempString = ''
 
-// const testing = () => {
-//     console.log(inputText.value)
-// }
 const newGame = () => {
     chances = 0; 
-    lettersCorrect = 0;
     rightGuesses = [];
     wrongGuesses = [];
     Gallows.src = './Hangman-00.svg'
@@ -55,7 +57,7 @@ const letterGuess = (x) => {
     }else if(chances >= 5){
         Gallows.src = './Hangman-06.svg'
         setTimeout(() => {
-            alert(`Sorry, the word we were looking for was: ${secretWord.join('').toUpperCase()}`)
+            alert(`Sorry, the word we were looking for was: ${secretWord.join('')}`)
         }, 500);
     }
 }
