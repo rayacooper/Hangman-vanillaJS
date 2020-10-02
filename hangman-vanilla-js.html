@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="hangman-vanilla-js.css">
 </head>
 <body>
-    <div classname="HangmanDisplay">
+    <div class="HangmanHeader">
         <h1>Let's Play Hangman</h1>
         <button id="NewGame" onclick={newGame()}>Start a New Game</button>
     </div>
 
-    <div classname="HangmanDisplay">
-        <p id = 'WordPrompt'></p>
-        <p id="placeHolder"></p>
-        <p id="guessWrong"></p>
+    <div class="HangmanDisplay">
+        <div class="HangmanInner">
+            <img id="Gallows" src="./Hangman-00.svg" alt="Hangman"/>
+        </div>
+
+        <div class="HangmanInner">
+            <p id = 'WordPrompt'></p>
+            <p id="placeHolder"></p>
+            <p id="guessWrong"></p>
+        </div>
+        
     </div>
 
     <div id="Alphabet">

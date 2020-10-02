@@ -2,6 +2,7 @@ const inputText = document.getElementById('Text');
 const placeHolder = document.getElementById('placeHolder')
 const guessWrong = document.getElementById('guessWrong')
 const WordPrompt = document.getElementById('WordPrompt')
+const Gallows = document.getElementById('Gallows')
 
 const allThemLetters = a = 'a', b = 'b', c = 'c', d = 'd', e = 'e', f = 'f', g = 'g', h = 'h', i = 'i', j = 'j', k = 'k',
     l = 'l', m = 'm', n = 'n', o = 'o', p = 'p', q = 'q', r = 'r', s = 's', t = 't', u = 'u', v = 'v', w = 'w', x = 'x',
@@ -26,6 +27,7 @@ const newGame = () => {
     lettersCorrect = 0;
     rightGuesses = [];
     wrongGuesses = [];
+    Gallows.src = './Hangman-00.svg'
     rando = Math.floor(Math.random() * 5)
     secretWord = listOfWords[rando].split('');
     prompter = listOfPrompts[rando];
@@ -49,9 +51,12 @@ const letterGuess = (x) => {
         chances++
         wrongGuesses.push(x)
         guessWrong.innerHTML = wrongGuesses.join('')
-        alert('Whoops! Try again!')
+        Gallows.src = `./Hangman-0${wrongGuesses.length}.svg`
     }else if(chances >= 5){
-        alert('Sorry, out of guesses!')
+        Gallows.src = './Hangman-06.svg'
+        setTimeout(() => {
+            alert(`Sorry, the word we were looking for was: ${secretWord.join('').toUpperCase()}`)
+        }, 500);
     }
 }
 

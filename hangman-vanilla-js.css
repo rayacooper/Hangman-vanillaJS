@@ -10,11 +10,15 @@ body {
 
 .HangmanDisplay {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-around;
     margin: 2vw;
-    height: 40vh;
+}
+
+.HangmanInner {
+    height: 30vh;
+    width: 30vh;
 }
 
 #placeHolder {
