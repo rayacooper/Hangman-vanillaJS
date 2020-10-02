@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="hangman-vanilla-js.css">
 </head>
 <body>
-    <div id="HangmanDisplay">
+    <div classname="HangmanDisplay">
         <h1>Let's Play Hangman</h1>
         <button id="NewGame" onclick={newGame()}>Start a New Game</button>
+    </div>
+
+    <div classname="HangmanDisplay">
+        <p id = 'WordPrompt'></p>
         <p id="placeHolder"></p>
         <p id="guessWrong"></p>
     </div>

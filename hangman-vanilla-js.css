@@ -8,15 +8,22 @@ body {
     justify-content: center;
 }
 
-#HangmanDisplay {
+.HangmanDisplay {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 2vw;
+    height: 40vh;
 }
 
 #placeHolder {
     letter-spacing: 2vw;
+}
+
+#NewGame {
+    width: 20vw;
+    margin: auto;
 }
 
 #Alphabet {
@@ -40,18 +47,3 @@ body {
     border-radius: 50%;
 }
 
-#Guesses{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#Guesses input{
-    width: 30vw;
-    height: 2vw;
-}
-
-#Guesses button {
-    height: 2vw;
-    margin-top: -.5vw;
-}
